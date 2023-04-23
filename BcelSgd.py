@@ -321,7 +321,6 @@ def BcelSGD (learningRate, data_dir):
             correct_train += (predicted_train == labels).sum(dim=1).clamp(0, 1).sum().item()
 
             total_train += labels.size(0)
-            correct_train += (predicted_train == labels).sum().item()
 
         # Loop de validação
         correct_val = 0
