@@ -346,7 +346,7 @@ def BcelSGD (learningRate, data_dir):
                 predicted_val = predicted_val.view(-1, 1)
                 correct_val += (predicted_val == labels_val).sum(dim=1).clamp(0, 1).sum().item()
                 total_val += labels_val.size(0)
-                correct_val += (predicted_val == labels_val.float().view(-1)).sum().item()
+                
 
         # Imprimindo resultados
         epoch_fim = time.time()
